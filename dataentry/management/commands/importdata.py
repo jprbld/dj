@@ -15,7 +15,7 @@ class Command(BaseCommand):
     def handle(self, *args: Any, **kwargs: Any) -> str | None:
 
         file_path = kwargs['file_path']
-        model_name = kwargs['model_name']
+        model_name = kwargs['model_name'].capitalize()
 
         model = None
         for app_config in apps.get_app_configs():
